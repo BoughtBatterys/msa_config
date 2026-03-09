@@ -20,19 +20,21 @@ spring:
         password: guen8903!@12
 
     jpa:
+        database: mariadb
+        database-platform: org.hibernate.dialect.MariaDBDialect
         hibernate: 
             # create, create-drop, update, none
             # 위의 명령어는 서버가 로딩될 때마다 매번 실행되므로, 처음 테이블만 만들고 none으로 바꾸는게 나음
             ddl-auto: create #기존 테이블을 그대로 사용하려면 이거 유지해라
         # 콘솔출력
         show-sql: true     
-        properties:
-        hibernate:
-            # h2
-            # dialect: org.hibernate.dialect.H2Dialect
-            # mariadb
-            dialect: org.hibernate.dialect.MariaDBDialect
-            format_sql: true
+        # properties:
+        #     hibernate:
+        #         # h2
+        #         # dialect: org.hibernate.dialect.H2Dialect
+        #         # mariadb
+        #         dialect: org.hibernate.dialect.MariaDBDialect
+        #         format_sql: true
             
     data:
         redis:
