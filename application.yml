@@ -42,7 +42,7 @@ spring:
             port: 6379
             password: 
             timeout: 6000s
-
+            
     cloud:
         bus:
             enabled: true
