@@ -1,0 +1,9 @@
+spring:
+  kafka:
+    bootstrap-servers: localhost:9092
+    # RoundRobin 방식으로 topic을 읽어오므로, 선입 선출 방식으로 메시지를 읽어옴
+    consumer:
+        # order-service에서 보낸 메시지를 읽어오는 컨슈머 그룹 아이디
+        group-id: product-group
+        # 컨슈머가 읽을 메시지가 없을 때, earliest로 설정하면 가장 처음부터 읽어오고, latest로 설정하면 가장 최근부터 읽어옴
+        auto-offset-reset: earliest
