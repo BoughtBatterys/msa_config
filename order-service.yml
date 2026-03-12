@@ -1,6 +1,6 @@
 spring:
   kafka:
-    bootstrap-servers: localhost:9092
+    bootstrap-servers: kafka-service:9092
     # kafka의 서버이므로 consumer는 사용 안함
 feign:
   circuitbreaker:

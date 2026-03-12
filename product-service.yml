@@ -1,6 +1,6 @@
 spring:
   kafka:
-    bootstrap-servers: localhost:9092
+    bootstrap-servers: kafka-service:9092
     # RoundRobin 방식으로 topic을 읽어오므로, 선입 선출 방식으로 메시지를 읽어옴
     consumer:
         # order-service에서 보낸 메시지를 읽어오는 컨슈머 그룹 아이디
